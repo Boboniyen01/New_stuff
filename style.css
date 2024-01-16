@@ -43,8 +43,8 @@ header nav>ul li a:hover{
     
 }
 #first-sec{
-    width: 800px;
-    margin: 32px auto;
+    width:50rem;
+    margin: 2rem auto;
     background-color: rgb(59, 54, 54);
     border-radius: 20px;
     padding: 1rem;
@@ -79,7 +79,7 @@ color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     word-spacing: 0.25rem;
     margin: 1rem 0rem;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 span{
     font-weight: bold;
@@ -104,7 +104,7 @@ span{
     background-color: rgb(19, 18, 18);
   width: 100%;
   box-sizing: border-box;
-  height: 200px;
+  height: 12.5rem;
 }
 #road-lines{
    margin-top: -100px;
@@ -144,4 +144,92 @@ span{
     margin: 1rem 0rem;
     font-size: 18px;
     text-align: center;
+ }
+
+ @media (max-width:750px){
+    
+    body{
+        padding:0rem ;
+        margin: 0rem;
+        text-align: center;
+    }
+
+    header{
+        width: 100%; 
+        padding-left: 0.9rem;
+    }
+       header nav>ul {
+        font-size: 0.5rem;
+        margin-left: -100px;
+        padding: 0.65rem;
+    }
+  
+        main{
+        width:450px;
+        margin: 0rem auto;
+        padding: 0rem;
+
+       }
+       /*  this didnt work because theywere stored inside a div/container and wasnt able to access it ensure you access hte right thing
+        */
+        #first-sec{
+            width: 450px;
+        }
+        #second-sec{
+            margin: 0rem auto;
+            text-align: center;
+            padding-left: 1rem;
+        }
+       .contain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0rem auto;
+       }
+       .contain img {
+        width:450px;
+       
+        margin-right: -200px;}
+        .headpara{
+            width: 60%;
+            margin: 0rem auto
+        }
+        #third-sec{
+            width: 450px;
+            padding:1rem;
+            margin: 1rem auto;
+            /* align-items: center; */
+
+        }
+        video{
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 95%;
+        
+        }
+        #road{
+            width: 100%;
+           text-align: center;
+
+        }
+        #road-lines{
+            width: 100%;
+        }
+        #img-car{
+            width: 10%;
+           margin-left:-400px ;
+        }
+        #img-car.cardrive{
+            animation-name: drive;
+           animation-duration: 3s; 
+           animation-fill-mode: forwards;
+       }
+        @keyframes drive{
+           from{transform: translateX(46px);}
+           to{transform: translateX(400px);}
+        }
+      
  }
