@@ -10,6 +10,7 @@ header{
     padding: 0rem 0.5rem;
     color: rgb(253, 191, 97);
     background-color: rgb(117, 117, 117);
+    width: 100%;
 }
 header h1 a{
     font-size:2rem ;
@@ -116,7 +117,7 @@ span{
 #img-car.cardrive{
      animation-name: drive;
     animation-duration: 3s; 
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
 }
  @keyframes drive{
     from{transform: translateX(100px);}
@@ -153,27 +154,26 @@ span{
         margin: 0rem;
         text-align: center;
     }
+    
+    main{
+        width:300px;
+        margin: 0rem auto;
+        padding: 0rem;}
 
     header{
         width: 100%; 
-        padding-left: 0.9rem;
+        padding: 0rem auto;
     }
        header nav>ul {
         font-size: 0.5rem;
-        margin-left: -100px;
+        margin-left: -150px;
         padding: 0.65rem;
     }
   
-        main{
-        width:450px;
-        margin: 0rem auto;
-        padding: 0rem;
-
-       }
        /*  this didnt work because theywere stored inside a div/container and wasnt able to access it ensure you access hte right thing
         */
         #first-sec{
-            width: 450px;
+            width: 300px;
         }
         #second-sec{
             margin: 0rem auto;
@@ -188,28 +188,31 @@ span{
         margin: 0rem auto;
        }
        .contain img {
-        width:450px;
-       
-        margin-right: -200px;}
+        width:250px;
+        height: 250px; /*note image did not have height before hence behaved relative to the width*/
+        border: 5px solid white;
+        display: inline-block;
+        margin:6px -210px 6px 0px;
+        border-radius:100%;}
+        
+        /* margin-right: -200px;} */
         .headpara{
             width: 60%;
             margin: 0rem auto
         }
         #third-sec{
-            width: 450px;
-            padding:1rem;
+            width: 300px;
+            padding:1rem 1rem 1rem 0.65rem;
             margin: 1rem auto;
             /* align-items: center; */
 
         }
-        video{
-            display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+        #third-sec>video{
+        display:block;
         width: 95%;
-        
+        margin: 1rem auto; /*the flex box didnt work here but block did also when selecting inhad to point directly to the video using selectors '>'*/
         }
+       
         #road{
             width: 100%;
            text-align: center;
@@ -220,16 +223,18 @@ span{
         }
         #img-car{
             width: 10%;
-           margin-left:-400px ;
+           margin-left:-250px ;
         }
         #img-car.cardrive{
             animation-name: drive;
-           animation-duration: 3s; 
-           animation-fill-mode: forwards;
+           animation-duration: 2s; 
+           animation-fill-mode: backwards;
+           animation-iteration-count:2;
        }
+
         @keyframes drive{
-           from{transform: translateX(46px);}
-           to{transform: translateX(400px);}
+           from{transform: translateX(47px);}
+           to{transform: translateX(250px);}
         }
       
  }
