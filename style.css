@@ -161,14 +161,16 @@ span{
         padding: 0rem;}
 
     header{
-        width: 100%; 
-        padding: 0rem auto;
-    }
+        width: 100%; }
+       
        header nav>ul {
-        font-size: 0.5rem;
-        margin-left: -150px;
+        font-size: 0.2rem;
+        margin-left:-60px;
         padding: 0.65rem;
-    }
+        display: block;}
+        
+    header nav>ul li{font-size: 10px;}
+
   
        /*  this didnt work because theywere stored inside a div/container and wasnt able to access it ensure you access hte right thing
         */
