@@ -1,23 +1,22 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-color:rgb(165, 164, 164);
+    background-color:rgb(255, 255, 255);
 }
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 0.5rem;
-    color: rgb(253, 191, 97);
-    background-color: rgb(117, 117, 117);
+    background-color: rgb(229, 226, 226);
     width: 100%;
 }
 header h1 a{
-    font-size:2rem ;
+    font-size:2.5rem ;
     font-weight: bold;
     font-family: "Lexend Deca";
     text-decoration: none;
-    color: rgb(253, 191, 97);
+    color: #ffffff;
 }
 header nav>ul{
     display: flex;
@@ -27,26 +26,31 @@ header nav>ul{
 }
 header nav>ul li a{
     margin:1rem;
-    font-size:1rem ;
+    font-size:1.05rem ;
     text-decoration: none;
-    color: rgb(253, 191, 97);
+    color: #ffffff;
+    background-color: rgb(168, 255, 240);
+   border: 3px solid white;
+   padding: 0.25rem;
+   border-radius: 8px;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
 header nav>ul li a:hover{
-   color: white;
-
-   background-color: rgb(255, 221, 170);
+   color: rgb(163, 158, 158);
+   background-color:transparent;
    border: 3px solid white;
    padding: 0.35rem;
    border-radius: 8px;
+   font-weight: bold;
     
 }
 #first-sec{
     width:50rem;
     margin: 2rem auto;
-    background-color: rgb(59, 54, 54);
+    background-color: rgb(171, 168, 168);
+    box-shadow:1px 1px 5px black ;
     border-radius: 20px;
     padding: 1rem;
     
@@ -65,18 +69,24 @@ header nav>ul li a:hover{
 }
 .headpara{
     margin-left: -7rem;
-border: 3px solid rgb(255, 229, 182);
+border: 3px solid rgb(168, 255, 240);
 padding: 1rem;
 border-radius: 10px;
 }
-.headpara h2 ,h1{
+h1{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 font-size: 1.5rem;
-color: white;
+color:white;
+}
+.headpara h2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 1.5rem;
+color: rgb(255, 255, 255);
 }
 .headpara p{
-color: white;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     word-spacing: 0.25rem;
     margin: 1rem 0rem;
@@ -92,14 +102,15 @@ span{
     margin: 3rem auto;
     text-align: center;
     padding: 1rem;
-    background: linear-gradient(360deg,rgb(252, 229, 186),rgb(80, 80, 5));
-    border-radius: 10px;
+    background-color: rgb(171, 168, 168);
+    border-radius: 20px;
+    box-shadow:1px 1px 5px black ;
     border: 3px solid white;
 }
 #third-sec video{
     border-radius: 20px;
     border: 3px solid white;
-    margin:0rem  0.5rem;
+ text-align: center;
 }
 #road{
     background-color: rgb(19, 18, 18);
@@ -119,14 +130,17 @@ span{
     animation-duration: 3s; 
     animation-fill-mode: backwards;
 }
+#first-header{
+    color: rgb(163, 158, 158);
+   }
  @keyframes drive{
     from{transform: translateX(100px);}
-    to{transform: translateX(1200px);}
+    to{transform: translateX(1250px);}
  }
  button{
     color: white;
-    background-color:rgb(253, 191, 97) ;
-    font-size: 18px;
+    background-color:rgb(168, 255, 240) ;
+    font-size: 20px;
     border: 1px solid white;
     padding: 0.35rem;
     border-radius: 10px;
@@ -134,16 +148,16 @@ span{
     margin-left: 10px;
  }
  button:hover{
-    color: rgb(253, 191, 97);
+    color: rgb(168, 255, 240);
     background-color: white;
-    border: 4px solid rgb(66, 62, 62);
+    border: 2px solid rgb(189, 187, 187);
  }
  p{
-    color: white;
+    color: rgb(163, 158, 158);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     word-spacing: 0.25rem;
     margin: 1rem 0rem;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
  }
 
@@ -157,6 +171,8 @@ span{
     
     main{
         width:300px;
+        display: grid;
+        place-content: center;
         margin: 0rem auto;
         padding: 0rem;}
 
@@ -169,7 +185,11 @@ span{
         padding: 0.65rem;
         display: block;}
         
-    header nav>ul li{font-size: 10px;}
+    header nav>ul li{font-size: 8px;
+    padding: 0.15rem;}
+
+    header nav>ul .first-list{ margin-bottom: 1rem;
+    }
 
   
        /*  this didnt work because theywere stored inside a div/container and wasnt able to access it ensure you access hte right thing
@@ -178,7 +198,7 @@ span{
             width: 300px;
         }
         #second-sec{
-            margin: 0rem auto;
+            margin-bottom: 1rem;
             text-align: center;
             padding-left: 1rem;
         }
@@ -204,8 +224,8 @@ span{
         }
         #third-sec{
             width: 300px;
-            padding:1rem 1rem 1rem 0.65rem;
-            margin: 1rem auto;
+            padding:1rem auto ;
+         
             /* align-items: center; */
 
         }
@@ -230,8 +250,6 @@ span{
         #img-car.cardrive{
             animation-name: drive;
            animation-duration: 2s; 
-           animation-fill-mode: backwards;
-           animation-iteration-count:2;
        }
 
         @keyframes drive{
