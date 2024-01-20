@@ -177,7 +177,8 @@ span{
         padding: 0rem;}
 
     header{
-        width: 100%; }
+        width: 100%; 
+    padding: 0rem 0rem 0rem 0rem ;}
        
        header nav>ul {
         font-size: 0.2rem;
